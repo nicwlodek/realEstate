@@ -207,7 +207,7 @@ constructor(props) {
 
   onListenClick() {
 
-    fetch('http://api/credentials')
+    fetch('http:/api/credentials')
     .then(function(response) {
         return response.text();
     }).then((accessToken) => {
