@@ -118,18 +118,18 @@ app.listen(port, function() {
 // this sets up a basic server on port 3001 using an included self-signed certificate
 // note: this is not suitable for production use
 // however bluemix automatically adds https support at https://<myapp>.mybluemix.net
-if (!process.env.VCAP_SERVICES) {
-  const fs = require('fs');
-  const https = require('https');
-  const HTTPS_PORT = 3001;
+// if (!process.env.VCAP_SERVICES) {
+//   const fs = require('fs');
+//   const https = require('https');
+//   const HTTPS_PORT = 3001;
 
-  const options = {
-    key: fs.readFileSync(__dirname + '/keys/localhost.pem'),
-    cert: fs.readFileSync(__dirname + '/keys/localhost.cert')
-  };
-  https.createServer(options, app).listen(HTTPS_PORT, function() {
-    console.log('Secure server live at https://localhost:%s/', HTTPS_PORT);
-  });
-}
+//   const options = {
+//     key: fs.readFileSync(__dirname + '/keys/localhost.pem'),
+//     cert: fs.readFileSync(__dirname + '/keys/localhost.cert')
+//   };
+//   https.createServer(options, app).listen(HTTPS_PORT, function() {
+//     console.log('Secure server live at https://localhost:%s/', HTTPS_PORT);
+//   });
+// }
 
 
